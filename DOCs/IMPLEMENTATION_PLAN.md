@@ -34,7 +34,7 @@
 
 | # | Task | Done |
 |---|---|---|
-| R1.1 | Layout: navbar, footer, theme toggle (dark mode) | [ ] |
+| R1.1 | Layout: navbar, footer, theme toggle (dark mode) | [x] |
 | R1.2 | ⛔ `ToolShell`: UploadBox, FileList (reorder/remove), OptionsPanel slot, ProgressBar + Cancel, ResultCard, PrivacyBadge, error Alert | [ ] |
 | R1.3 | ⛔ `tool-runner.ts`: run a tool in a Web Worker with progress, cancel, error mapping | [ ] |
 | R1.4 | Dynamic route `/tools/[toolId]` with `generateStaticParams` from registry | [ ] |
