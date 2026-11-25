@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+package-lock.json
+DOCs
+*.md
+# shared contract: kept exactly as written in DOCs/ARCHITECTURE.md
+src/tools/types.ts
+src/tools/errors.ts
