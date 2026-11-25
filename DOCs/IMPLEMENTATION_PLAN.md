@@ -22,7 +22,7 @@
 | 0.6 | Vercel project linked to repo, preview deploys per PR | 🆁 | [ ] |
 | 0.7 | Supabase project created; keys in `.env.local` and Vercel env vars | 🆁 | [ ] |
 | 0.8 | Design tokens from `DESIGN.md` in Tailwind config; Inter font; Lucide icons | 🆁 | [x] |
-| 0.9 | Spike: load `pdf-lib` and `pdfjs-dist` in a Web Worker; confirm it works in static export | 🅰️ | [ ] |
+| 0.9 | Spike: load `pdf-lib` and `pdfjs-dist` in a Web Worker; confirm it works in static export | 🅰️ | [x] |
 
 **Exit:** empty site deployed on Vercel; both can run it locally; contract committed.
 
