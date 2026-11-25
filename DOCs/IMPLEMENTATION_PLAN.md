@@ -18,7 +18,7 @@
 | 0.2 | Add all docs to the repo (`AGENTS.md`, `CLAUDE.md` in root; others in `DOCs/`) | 🤝 | [ ] |
 | 0.3 | ⛔ Next.js + TypeScript strict + Tailwind + static export; ESLint, Prettier; scripts `dev/lint/typecheck/test/test:e2e/build` | 🆁 | [x] |
 | 0.4 | ⛔ Commit `src/tools/types.ts`, `errors.ts`, empty `registry.ts` (contract from `ARCHITECTURE.md`) | 🆁 | [ ] |
-| 0.5 | Vitest + Playwright setup, sample test, `tests/fixtures/` with sample PDFs (normal, scanned, encrypted, corrupt, 100+ pages) | 🆁 (setup) / 🅰️ (fixtures) | [ ] |
+| 0.5 | Vitest + Playwright setup, sample test, `tests/fixtures/` with sample PDFs (normal, scanned, encrypted, corrupt, 100+ pages) | 🆁 (setup) / 🅰️ (fixtures) | [x] |
 | 0.6 | Vercel project linked to repo, preview deploys per PR | 🆁 | [ ] |
 | 0.7 | Supabase project created; keys in `.env.local` and Vercel env vars | 🆁 | [ ] |
 | 0.8 | Design tokens from `DESIGN.md` in Tailwind config; Inter font; Lucide icons | 🆁 | [x] |
