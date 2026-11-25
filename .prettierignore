@@ -7,3 +7,5 @@ DOCs
 # shared contract: kept exactly as written in DOCs/ARCHITECTURE.md
 src/tools/types.ts
 src/tools/errors.ts
+test-results
+playwright-report
