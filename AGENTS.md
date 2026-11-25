@@ -6,13 +6,13 @@ This file tells any AI coding agent (Claude, Codex, Cursor, Copilot, etc.) how t
 
 | File | Why |
 |---|---|
-| `PRD.md` | What we build and why. Feature priorities (P0/P1/P2). |
-| `ARCHITECTURE.md` | How the code is structured. The tool contract. Database. |
-| `DESIGN.md` | Colours, fonts, components, page layouts. |
-| `IMPLEMENTATION_PLAN.md` | Build order and who owns each task. |
-| `TESTING.md` | How to test, the privacy check, and the bug log. |
+| `DOCs/PRD.md` | What we build and why. Feature priorities (P0/P1/P2). |
+| `DOCs/ARCHITECTURE.md` | How the code is structured. The tool contract. Database. |
+| `DOCs/DESIGN.md` | Colours, fonts, components, page layouts. |
+| `DOCs/IMPLEMENTATION_PLAN.md` | Build order and who owns each task. |
+| `DOCs/TESTING.md` | How to test, the privacy check, and the bug log. |
 
-If these files disagree, the order of authority is: **this file > ARCHITECTURE.md > PRD.md > others**. Point out the conflict to the human.
+If these files disagree, the order of authority is: **this file > DOCs/ARCHITECTURE.md > DOCs/PRD.md > others**. Point out the conflict to the human.
 
 ## 2. The one rule that matters most
 
@@ -47,7 +47,7 @@ If a task seems to require breaking this, **stop and ask the human**.
 |---|---|---|
 | Tools engine (all file processing) | **Agniv** | `src/tools/**` (except `types.ts`), `src/workers/**`, `public/wasm/**`, `public/models/**` |
 | Platform (UI shell, auth, history, admin, deploy, desktop) | **Rohit** | `src/app/**`, `src/components/**`, `src/lib/**`, `src/admin/**`, `supabase/**`, `src-tauri/**` |
-| Shared (change only when both agree) | Both | `src/tools/types.ts`, `src/tools/registry.ts` (Agniv adds entries, Rohit reads), `DESIGN.md` tokens, root config files, all `*.md` docs |
+| Shared (change only when both agree) | Both | `src/tools/types.ts`, `src/tools/registry.ts` (Agniv adds entries, Rohit reads), `DOCs/DESIGN.md` tokens, root config files, all `*.md` docs |
 
 Ask the human which owner they are at the start of a session if it is not clear.
 
@@ -70,7 +70,7 @@ Adding a new major library or changing one of these needs owner approval.
 - **File names:** `kebab-case.ts`; React components `PascalCase.tsx`.
 - **One tool = one folder:** `src/tools/<tool-id>/` with `index.ts` (the `ToolDefinition`), `run.ts` (logic), optional `OptionsPanel.tsx`, optional `worker.ts`.
 - **Pure tool logic:** `run()` takes `File[]` and options, returns `{ name, blob }[]`. No UI, no network, no global state.
-- **Errors:** throw `ToolError` with a `userMessage` in simple English (see `ARCHITECTURE.md`). Never show raw stack traces to users.
+- **Errors:** throw `ToolError` with a `userMessage` in simple English (see `DOCs/ARCHITECTURE.md`). Never show raw stack traces to users.
 - **Comments:** explain *why*, not *what*. Comment anything non-obvious (PDF internals, WASM setup).
 - **Keep it simple.** Prefer readable code over clever code. The owners rely heavily on AI-assisted coding, so clarity matters.
 - **Formatting:** Prettier + ESLint defaults from the repo config. Run lint before committing.
@@ -78,13 +78,13 @@ Adding a new major library or changing one of these needs owner approval.
 
 ## 7. Workflow for every task
 
-1. Find the task in `IMPLEMENTATION_PLAN.md`. Confirm it belongs to the current owner.
+1. Find the task in `DOCs/IMPLEMENTATION_PLAN.md`. Confirm it belongs to the current owner.
 2. **Ask the human**, then create a branch: `<owner>/<short-task>` (e.g. `agniv/merge-tool`, `rohit/login`).
 3. Make the smallest change that completes the task.
 4. Run: `npm run lint`, `npm run typecheck`, `npm run test`, `npm run build`.
-5. Do the manual checks in `TESTING.md` (always including the **privacy check**).
-6. Tick the task in `IMPLEMENTATION_PLAN.md` in the same PR.
-7. Log any bug found but not fixed in `TESTING.md` → Bug Log.
+5. Do the manual checks in `DOCs/TESTING.md` (always including the **privacy check**).
+6. Tick the task in `DOCs/IMPLEMENTATION_PLAN.md` in the same PR.
+7. Log any bug found but not fixed in `DOCs/TESTING.md` → Bug Log.
 8. **Ask the human**, then commit with a short clear message (`add merge tool`, `fix history delete`).
 9. **Before pushing:** `git fetch`, check for conflicts with the target branch, report them, and ask before pushing. Then open a PR. The description lists: what changed, how it was tested, new dependencies + licences, screenshots for UI.
 

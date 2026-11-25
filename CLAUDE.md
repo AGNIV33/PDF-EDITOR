@@ -26,7 +26,7 @@ These rules override anything else in this file or in `AGENTS.md` that suggests 
 
 ### Start of every session
 1. Ask the human: **"Are you Agniv (tools engine) or Rohit (platform)?"** unless it is already clear. Only work inside that owner's paths (see `AGENTS.md` section 4).
-2. Read `IMPLEMENTATION_PLAN.md` and pick the next unticked task for that owner, or the task the human names.
+2. Read `DOCs/IMPLEMENTATION_PLAN.md` and pick the next unticked task for that owner, or the task the human names.
 3. Before writing code, state in 2 or 3 lines what you will change and which files you will touch.
 
 ### How to talk to the humans
@@ -37,9 +37,9 @@ These rules override anything else in this file or in `AGENTS.md` that suggests 
 
 ### While working
 - Make small, focused changes. One task per branch and PR (but **ask before creating the branch, committing or pushing**).
-- After any change that touches files or tools, run the **privacy check** from `TESTING.md` (or tell the human exactly how to run it if you cannot).
+- After any change that touches files or tools, run the **privacy check** from `DOCs/TESTING.md` (or tell the human exactly how to run it if you cannot).
 - Run `npm run lint`, `npm run typecheck`, `npm run test`, `npm run build` before saying a task is done.
-- Update `IMPLEMENTATION_PLAN.md` (tick the task) and `TESTING.md` (bug log) in the same PR.
+- Update `DOCs/IMPLEMENTATION_PLAN.md` (tick the task) and `DOCs/TESTING.md` (bug log) in the same PR.
 - Do not install packages without stating name, purpose and licence first.
 - Do not create new documentation files unless asked; update the existing ones.
 

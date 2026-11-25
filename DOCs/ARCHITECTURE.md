@@ -51,8 +51,8 @@
 
 ```
 /
-├─ AGENTS.md  CLAUDE.md  PRD.md  ARCHITECTURE.md  DESIGN.md
-├─ IMPLEMENTATION_PLAN.md  TESTING.md  README.md
+├─ AGENTS.md  CLAUDE.md  README.md
+├─ DOCs/  PRD.md  ARCHITECTURE.md  DESIGN.md  IMPLEMENTATION_PLAN.md  TESTING.md
 ├─ next.config.mjs            # output: 'export', headers notes
 ├─ public/
 │  ├─ wasm/                   # qpdf.wasm, etc.            (Agniv)

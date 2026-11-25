@@ -15,7 +15,7 @@
 | # | Task | Owner | Done |
 |---|---|---|---|
 | 0.1 | Pick working name, create GitHub repo, add both as collaborators, protect `main` (PR + 1 review) | 🤝 | [ ] |
-| 0.2 | Add all docs (`PRD`, `AGENTS`, `CLAUDE`, `ARCHITECTURE`, `DESIGN`, `IMPLEMENTATION_PLAN`, `TESTING`) to the repo | 🤝 | [ ] |
+| 0.2 | Add all docs to the repo (`AGENTS.md`, `CLAUDE.md` in root; others in `DOCs/`) | 🤝 | [ ] |
 | 0.3 | ⛔ Next.js + TypeScript strict + Tailwind + static export; ESLint, Prettier; scripts `dev/lint/typecheck/test/test:e2e/build` | 🆁 | [ ] |
 | 0.4 | ⛔ Commit `src/tools/types.ts`, `errors.ts`, empty `registry.ts` (contract from `ARCHITECTURE.md`) | 🆁 | [ ] |
 | 0.5 | Vitest + Playwright setup, sample test, `tests/fixtures/` with sample PDFs (normal, scanned, encrypted, corrupt, 100+ pages) | 🆁 (setup) / 🅰️ (fixtures) | [ ] |
